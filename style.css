@@ -101,3 +101,22 @@ nav a:hover {
 #home h1 {
     color: #39d98a;
 }
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-right: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #16805f;
+    font-weight: bold;
+    border: 1px solid #249b76;
+}
+
+.hero-buttons a:hover {
+    background-color: #1b936d;
+}
