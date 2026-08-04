@@ -1,27 +1,27 @@
-/* General Styling */
+/* ================================
+   Global Styles
+================================ */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #0d1117;
-    color: #f0f6fc;
+    background: #102a24;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-/* Navigation Bar */
+
+/* ================================
+   Navigation Bar
+================================ */
 
 header {
-    background-color: #0b0f14;
-    color: white;
-    padding: 20px 8%;
-    border-bottom: 1px solid #1f3d32;
+    padding: 20px 50px;
 }
 
 nav {
@@ -31,92 +31,101 @@ nav {
 }
 
 nav h2 {
-    margin: 0;
     font-size: 24px;
 }
 
 nav ul {
     display: flex;
-    gap: 25px;
+    align-items: center;
+    gap: 28px;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-nav a {
-    color: white;
+nav ul li a {
     text-decoration: none;
-    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-nav a:hover {
-    color: #00adb5;
+nav ul li a:hover {
+    color: #39d98a;
 }
 
 
-/* Home Section */
+/* ================================
+   Home Section
+================================ */
 
 #home {
-    min-height: 75vh;
+    min-height: 80vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 60px 8%;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
 }
 
+
+/* ================================
+   Profile Photo
+================================ */
+
+.profile-photo {
+    margin-bottom: 25px;
+}
+
+.profile-photo img {
+    width: 220px;
+    height: 220px;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 50%;
+
+    border: 4px solid #249b76;
+
+    box-shadow: 0 0 25px rgba(36, 155, 118, 0.35);
+}
+
+
+/* ================================
+   Home Text
+================================ */
+
 #home h1 {
-    font-size: 52px;
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+#home h2 {
+    font-size: 24px;
+    font-weight: 500;
     margin-bottom: 15px;
 }
 
 #home p {
-    font-size: 22px;
-    color: #555555;
-}
-
-
-/* Other Sections */
-
-section {
-    padding: 80px 8%;
-}
-
-section h2 {
-    font-size: 32px;
-}
-#home p {
-    font-size: 22px;
-    color: #c8e6d8;
-}
-
-section p {
+    max-width: 650px;
+    font-size: 18px;
     color: #d5eee3;
 }
-/* Green Accent */
 
-nav a:hover {
-    color: #39d98a;
+
+/* ================================
+   Footer
+================================ */
+
+footer {
+    text-align: center;
+    padding: 20px;
 }
 
-#home h1 {
-    color: #39d98a;
-}
-.hero-buttons {
-    margin-top: 25px;
-}
-
-.hero-buttons a {
-    display: inline-block;
-    padding: 12px 24px;
-    margin-right: 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #16805f;
-    font-weight: bold;
-    border: 1px solid #249b76;
-}
-
-.hero-buttons a:hover {
-    background-color: #1b936d;
+footer p {
+    color: #b8d8cc;
+    font-size: 14px;
 }
