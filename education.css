@@ -1,0 +1,505 @@
+/* =================================
+   Education Page
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(57, 217, 138, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(57, 217, 138, 0.06),
+            transparent 30%
+        ),
+        #102a24;
+
+    color: #ffffff;
+
+    min-height: 100vh;
+}
+
+
+/* =================================
+   Navigation
+================================= */
+
+header {
+    width: 100%;
+
+    padding: 22px 6%;
+
+    background: rgba(8, 27, 23, 0.88);
+
+    border-bottom: 1px solid rgba(57, 217, 138, 0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+
+nav {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+nav h2 {
+    color: #39d98a;
+
+    font-size: 23px;
+
+    white-space: nowrap;
+}
+
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+}
+
+
+nav ul li a {
+    color: #d5eee3;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    color: #39d98a;
+}
+
+
+/* =================================
+   Education Main
+================================= */
+
+.education-page {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 75px 30px 90px;
+}
+
+
+/* =================================
+   Heading
+================================= */
+
+.education-heading {
+
+    text-align: center;
+
+    margin-bottom: 65px;
+}
+
+
+.education-heading h1 {
+
+    font-size: 46px;
+
+    color: #39d98a;
+
+    margin-bottom: 12px;
+}
+
+
+.education-heading p {
+
+    font-size: 18px;
+
+    color: #b8d8cc;
+}
+
+
+/* =================================
+   Timeline
+================================= */
+
+.education-timeline {
+
+    position: relative;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding-left: 50px;
+}
+
+
+/* Vertical line */
+
+.education-timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 12px;
+
+    top: 5px;
+
+    bottom: 5px;
+
+    width: 2px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(57, 217, 138, 0.15),
+        #39d98a,
+        rgba(57, 217, 138, 0.15)
+    );
+}
+
+
+/* =================================
+   Timeline Item
+================================= */
+
+.education-item {
+
+    position: relative;
+
+    margin-bottom: 38px;
+}
+
+
+/* Timeline circle */
+
+.education-dot {
+
+    position: absolute;
+
+    left: -47px;
+
+    top: 28px;
+
+    width: 22px;
+
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: #39d98a;
+
+    border: 5px solid #102a24;
+
+    box-shadow:
+        0 0 0 2px #39d98a,
+        0 0 18px rgba(57, 217, 138, 0.35);
+}
+
+
+/* =================================
+   Education Card
+================================= */
+
+.education-card {
+
+    position: relative;
+
+    padding: 30px 32px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(57, 217, 138, 0.16);
+
+    border-left: 3px solid #39d98a;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.education-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(57, 217, 138, 0.45);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(57, 217, 138, 0.06);
+}
+
+
+/* =================================
+   Year
+================================= */
+
+.education-year {
+
+    display: inline-block;
+
+    color: #39d98a;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =================================
+   Degree Title
+================================= */
+
+.education-card h2 {
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    line-height: 1.45;
+
+    margin-bottom: 12px;
+}
+
+
+/* =================================
+   Institution
+================================= */
+
+.education-card a {
+
+    display: inline-block;
+
+    color: #d5eee3;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    transition: 0.3s ease;
+}
+
+
+.education-card a:hover {
+
+    color: #39d98a;
+
+    text-decoration: underline;
+}
+
+
+/* =================================
+   Department / Extra Text
+================================= */
+
+.education-card p {
+
+    margin-top: 9px;
+
+    color: #a9cfc0;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   Footer
+================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 1px solid rgba(57, 217, 138, 0.12);
+}
+
+
+footer p {
+
+    color: #8fb8a8;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   Responsive Design
+================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px 25px;
+    }
+
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    nav ul {
+
+        justify-content: center;
+
+        gap: 16px 20px;
+    }
+
+
+    .education-heading h1 {
+
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+
+        padding: 18px 15px;
+    }
+
+
+    nav h2 {
+
+        font-size: 20px;
+
+        text-align: center;
+    }
+
+
+    nav ul {
+
+        gap: 12px 16px;
+    }
+
+
+    nav ul li a {
+
+        font-size: 14px;
+    }
+
+
+    .education-page {
+
+        padding: 55px 18px 70px;
+    }
+
+
+    .education-heading {
+
+        margin-bottom: 50px;
+    }
+
+
+    .education-heading h1 {
+
+        font-size: 32px;
+    }
+
+
+    .education-heading p {
+
+        font-size: 15px;
+    }
+
+
+    .education-timeline {
+
+        padding-left: 32px;
+    }
+
+
+    .education-timeline::before {
+
+        left: 7px;
+    }
+
+
+    .education-dot {
+
+        left: -31px;
+
+        width: 18px;
+
+        height: 18px;
+
+        border-width: 4px;
+    }
+
+
+    .education-card {
+
+        padding: 23px 20px;
+    }
+
+
+    .education-card h2 {
+
+        font-size: 20px;
+    }
+
+
+    .education-card a {
+
+        font-size: 16px;
+    }
+
+
+    .education-card p {
+
+        font-size: 14px;
+    }
+}
