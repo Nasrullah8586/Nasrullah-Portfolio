@@ -635,3 +635,46 @@ footer p {
         font-size: 13px;
     }
 }
+
+/* Telegram username on hover */
+
+.telegram-info {
+    position: relative;
+    cursor: default;
+}
+
+.telegram-username {
+    position: absolute;
+
+    bottom: calc(100% + 10px);
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 7px 11px;
+
+    background: #0b211b;
+    color: #39d98a;
+
+    border: 1px solid rgba(57, 217, 138, 0.3);
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: 0.2s ease;
+
+    z-index: 10;
+}
+
+.telegram-info:hover .telegram-username {
+    opacity: 1;
+    visibility: visible;
+}
