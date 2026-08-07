@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Nasrullah Khan Ferdaus</title>
+
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+
+            <h2>Nasrullah Khan Ferdaus</h2>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Gallery Section -->
+    <main>
+
+        <section class="gallery-page">
+
+            <div class="gallery-heading">
+
+                <h1>My Gallery</h1>
+
+                <p>
+                    A collection of memorable moments from my
+                    academic, professional and cultural journey.
+                </p>
+
+            </div>
+
+
+            <!-- Filter Buttons -->
+            <div class="gallery-filters">
+
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="university">
+                    University / Campus
+                </button>
+
+                <button class="filter-btn" data-filter="events">
+                    Events
+                </button>
+
+                <button class="filter-btn" data-filter="cultural">
+                    Cultural Activities
+                </button>
+
+                <button class="filter-btn" data-filter="personal">
+                    Personal / Professional
+                </button>
+
+            </div>
+
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+
+
+                <!-- University / Campus -->
+
+                <div class="gallery-item" data-category="university">
+
+                    <img
+                        src="images/gallery/university/photo1.jpg"
+                        alt="University / Campus">
+
+                    <div class="image-overlay">
+
+                        <h3>University / Campus</h3>
+
+                        <p>
+                            My first speech in front of engineers —
+                            a memorable milestone.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Events -->
+
+                <div class="gallery-item" data-category="events">
+
+                    <img
+                        src="images/gallery/events/photo1.jpg"
+                        alt="BEAR Summit 2026">
+
+                    <div class="image-overlay">
+
+                        <h3>Events</h3>
+
+                        <p>
+                            A memorable experience at BEAR Summit 2026.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Cultural Activities -->
+
+                <div class="gallery-item" data-category="cultural">
+
+                    <img
+                        src="images/gallery/cultural/photo1.jpg"
+                        alt="July Utsob 2026">
+
+                    <div class="image-overlay">
+
+                        <h3>Cultural Activities</h3>
+
+                        <p>
+                            A memorable moment from July Utsob 2026.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Personal / Professional -->
+
+                <div class="gallery-item" data-category="personal">
+
+                    <img
+                        src="images/gallery/personal/photo1.jpg"
+                        alt="MIU Debate Club">
+
+                    <div class="image-overlay">
+
+                        <h3>Personal / Professional</h3>
+
+                        <p>
+                            Serving as Office Secretary of the MIU Debate Club.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Nasrullah Khan Ferdaus. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Gallery Filter Script -->
+
+    <script>
+
+        const filterButtons =
+            document.querySelectorAll(".filter-btn");
+
+        const galleryItems =
+            document.querySelectorAll(".gallery-item");
+
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const filter =
+                    button.getAttribute("data-filter");
+
+
+                filterButtons.forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+
+                galleryItems.forEach(item => {
+
+                    const category =
+                        item.getAttribute("data-category");
+
+
+                    if (
+                        filter === "all" ||
+                        category === filter
+                    ) {
+
+                        item.classList.remove("hidden");
+
+                    } else {
+
+                        item.classList.add("hidden");
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

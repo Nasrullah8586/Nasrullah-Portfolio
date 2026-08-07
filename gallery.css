@@ -1,0 +1,527 @@
+/* =================================
+   Gallery Page
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(57, 217, 138, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(57, 217, 138, 0.06),
+            transparent 30%
+        ),
+        #102a24;
+
+    color: #ffffff;
+
+    min-height: 100vh;
+}
+
+
+/* =================================
+   Navigation
+================================= */
+
+header {
+    width: 100%;
+
+    padding: 22px 6%;
+
+    background: rgba(8, 27, 23, 0.88);
+
+    border-bottom: 1px solid rgba(57, 217, 138, 0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+
+nav {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+nav h2 {
+    color: #39d98a;
+
+    font-size: 23px;
+
+    white-space: nowrap;
+}
+
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+}
+
+
+nav ul li a {
+    color: #d5eee3;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #39d98a;
+}
+
+
+/* =================================
+   Main Gallery
+================================= */
+
+.gallery-page {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 75px 30px 90px;
+}
+
+
+/* =================================
+   Heading
+================================= */
+
+.gallery-heading {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.gallery-heading h1 {
+
+    font-size: 46px;
+
+    color: #39d98a;
+
+    margin-bottom: 14px;
+}
+
+
+.gallery-heading p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #b8d8cc;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =================================
+   Filter Buttons
+================================= */
+
+.gallery-filters {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 45px;
+}
+
+
+.filter-btn {
+
+    padding: 11px 20px;
+
+    border: 1px solid rgba(57, 217, 138, 0.25);
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #cce6dc;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.filter-btn:hover {
+
+    border-color: #39d98a;
+
+    color: #39d98a;
+
+    transform: translateY(-2px);
+}
+
+
+.filter-btn.active {
+
+    background: #39d98a;
+
+    color: #0d241e;
+
+    border-color: #39d98a;
+
+    font-weight: bold;
+}
+
+
+/* =================================
+   Gallery Grid
+================================= */
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =================================
+   Gallery Item
+================================= */
+
+.gallery-item {
+
+    position: relative;
+
+    height: 280px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(57, 217, 138, 0.16);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.gallery-item:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(57, 217, 138, 0.08);
+}
+
+
+/* =================================
+   Gallery Image
+================================= */
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.gallery-item:hover img {
+
+    transform: scale(1.07);
+}
+
+
+/* =================================
+   Image Overlay
+================================= */
+
+.image-overlay {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 35px 18px 18px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.92)
+        );
+
+    transform: translateY(100%);
+
+    opacity: 0;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+
+/* Show overlay on hover */
+
+.gallery-item:hover .image-overlay {
+
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+
+/* Overlay Title */
+
+.image-overlay h3 {
+
+    font-size: 17px;
+
+    color: #ffffff;
+
+    margin-bottom: 5px;
+}
+
+
+/* Overlay Description */
+
+.image-overlay p {
+
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    color: #d1e8de;
+
+    margin: 0;
+}
+
+
+/* =================================
+   Hidden Items
+================================= */
+
+.gallery-item.hidden {
+
+    display: none;
+}
+
+
+/* =================================
+   Footer
+================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 1px solid rgba(57, 217, 138, 0.12);
+}
+
+
+footer p {
+
+    color: #8fb8a8;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   Tablet Responsive
+================================= */
+
+@media (max-width: 900px) {
+
+    header {
+
+        padding: 20px 25px;
+    }
+
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    nav ul {
+
+        justify-content: center;
+
+        gap: 16px 20px;
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .gallery-heading h1 {
+
+        font-size: 40px;
+    }
+}
+
+
+/* =================================
+   Mobile Responsive
+================================= */
+
+@media (max-width: 600px) {
+
+    header {
+
+        padding: 18px 15px;
+    }
+
+
+    nav h2 {
+
+        font-size: 20px;
+
+        text-align: center;
+    }
+
+
+    nav ul {
+
+        gap: 12px 16px;
+    }
+
+
+    nav ul li a {
+
+        font-size: 14px;
+    }
+
+
+    .gallery-page {
+
+        padding: 55px 18px 70px;
+    }
+
+
+    .gallery-heading h1 {
+
+        font-size: 32px;
+    }
+
+
+    .gallery-heading p {
+
+        font-size: 15px;
+    }
+
+
+    .gallery-filters {
+
+        gap: 9px;
+    }
+
+
+    .filter-btn {
+
+        padding: 9px 15px;
+
+        font-size: 13px;
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-item {
+
+        height: 260px;
+    }
+
+
+    .image-overlay {
+
+        padding: 30px 16px 16px;
+    }
+
+
+    .image-overlay h3 {
+
+        font-size: 16px;
+    }
+
+
+    .image-overlay p {
+
+        font-size: 12.5px;
+    }
+}
