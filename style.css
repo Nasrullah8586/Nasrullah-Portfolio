@@ -671,59 +671,58 @@ footer p {
 
 
     .home-description {
-
         font-size: 15px;
-
         line-height: 1.7;
     }
 
+    /* Mobile Buttons */
 
     .home-buttons {
-
+        display: flex;
         flex-direction: column;
-
+        align-items: center;
         width: 100%;
-
         gap: 12px;
+        margin-top: 30px;
     }
-
 
     .home-btn {
-
+        display: inline-block;
         width: 190px;
-
+        padding: 12px 24px;
         text-align: center;
+        text-decoration: none;
     }
 
+    .primary-btn {
+        background: #39d98a;
+        color: #0d241e;
+    }
+
+    .secondary-btn {
+        border: 1px solid rgba(57, 217, 138, 0.4);
+        color: #39d98a;
+        background: rgba(57, 217, 138, 0.04);
+    }
 
     .about-page {
-
         padding: 60px 20px;
     }
 
-
     .about-page h1 {
-
         font-size: 36px;
     }
 
-
     .about-page p {
-
         font-size: 16px;
-
         line-height: 1.8;
     }
 
-
     .about-block h2 {
-
         font-size: 22px;
     }
 
-
     .about-block li {
-
         font-size: 15px;
     }
 }
